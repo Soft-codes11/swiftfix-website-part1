@@ -3,64 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - SwiftFix Plumbing</title>
+    <title>About Us - SwiftFix Plumbing Services</title>
+    <meta name="description" content="Learn about SwiftFix Plumbing Services, a trusted Pretoria plumbing company offering professional repairs, maintenance and emergency support.">
+    <meta name="keywords" content="About SwiftFix Plumbing, Pretoria plumbing company, plumbing mission, emergency plumbing, plumbing values">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header>
-    <h1>About SwiftFix Plumbing <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=50&h=50&fit=crop&auto=format" alt="SwiftFix Logo"></h1>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a href="index.html">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=64&h=64&fit=crop&auto=format" alt="SwiftFix Plumbing logo">
+                <span>SwiftFix Plumbing Services</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Open navigation menu</span>
+            <span class="hamburger"></span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link active" href="about.html">About</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link" href="enquiry.html">Enquiry</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-
-<main>
-
-    <!-- Company Overview -->
-    <section>
-        <h2>Who We Are</h2>
-        <p>SwiftFix Plumbing is a trusted local plumbing company based in Pretoria, providing reliable and affordable services to homes and small businesses.</p>
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format" alt="Our professional plumbing team">
+<main class="page-content">
+    <section class="info-section">
+        <div class="section-title">About SwiftFix Plumbing</div>
+        <div class="grid-2">
+            <div>
+                <p>SwiftFix Plumbing Services is a Pretoria-based company specialising in residential and commercial plumbing solutions. We focus on fast response, professional workmanship and lasting repairs.</p>
+                <h2>Our Mission</h2>
+                <p>To deliver dependable plumbing services that give homeowners and businesses confidence in every repair, installation and maintenance visit.</p>
+                <h2>Our Vision</h2>
+                <p>To become Pretoria’s most trusted plumbing partner by combining technical skill with friendly local service.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=700&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&h=373&fit=crop&auto=format 480w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=700&fit=crop&auto=format 900w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=933&fit=crop&auto=format 1200w"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    alt="SwiftFix plumbing team working on a repair">
+            </div>
+        </div>
     </section>
-
-    <!-- Mission -->
-    <section>
-        <h2>Our Mission</h2>
-        <p>To deliver fast, efficient, and high-quality plumbing solutions that exceed customer expectations.</p>
-    </section>
-
-    <!-- Vision -->
-    <section>
-        <h2>Our Vision</h2>
-        <p>To become Pretoria’s most trusted plumbing service through consistent quality and customer satisfaction.</p>
-    </section>
-
-    <!-- Values -->
-    <section>
-        <h2>Our Values</h2>
-        <ul>
-            <li>Reliability</li>
-            <li>Professionalism</li>
-            <li>Customer Satisfaction</li>
-            <li>Transparency</li>
+    <section class="info-section">
+        <div class="section-title">Our Values</div>
+        <ul class="feature-list">
+            <li>Reliability: arriving on time and finishing jobs correctly.</li>
+            <li>Professionalism: clean uniforms, clear estimates and courteous service.</li>
+            <li>Customer satisfaction: listening to needs and delivering practical results.</li>
+            <li>Transparency: honest advice, fair pricing and no hidden costs.</li>
         </ul>
     </section>
-
+    <section class="info-section">
+        <div class="section-title">Why Choose Us</div>
+        <div class="grid-3">
+            <article class="card">
+                <h3>Local Pretoria Experts</h3>
+                <p>SwiftFix understands the local plumbing challenges of Pretoria homes and businesses.</p>
+            </article>
+            <article class="card">
+                <h3>24/7 Emergency Support</h3>
+                <p>Available for urgent leaks, burst pipes and blocked drains when problems cannot wait.</p>
+            </article>
+            <article class="card">
+                <h3>Clear Communication</h3>
+                <p>We explain the problem, options and costs before starting any repair.</p>
+            </article>
+        </div>
+    </section>
 </main>
-
-<footer>
-    <p>&copy; 2026 SwiftFix Plumbing Services</p>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h3>About SwiftFix</h3>
+            <p>Local Pretoria plumbers delivering prompt repairs, maintenance and installations for homes and businesses.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@swiftfix.co.za">info@swiftfix.co.za</a></p>
+            <p>Phone: <a href="tel:+27123456789">012 345 6789</a></p>
+            <p>Pretoria, South Africa</p>
+        </div>
+    </div>
+    <p class="footer-note">&copy; 2026 SwiftFix Plumbing Services. All rights reserved.</p>
 </footer>
-
 <script src="js/script.js"></script>
 </body>
 </html>

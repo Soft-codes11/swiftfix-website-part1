@@ -1,85 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta setup for responsiveness and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftFix Plumbing Services</title>
-    <!-- CSS will be added in Part 2 -->
+    <title>SwiftFix Plumbing Services | Pretoria Emergency Plumbers</title>
+    <meta name="description" content="SwiftFix Plumbing Services delivers fast, reliable plumbing repairs, leak detection, and emergency plumbing in Pretoria and surrounding areas.">
+    <meta name="keywords" content="Pretoria plumbing, emergency plumber Pretoria, leak repair, drain cleaning, pipe installation, SwiftFix Plumbing">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-<!-- ===== HEADER SECTION ===== -->
-<header>
-    <h1>SwiftFix Plumbing Services <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=50&h=50&fit=crop&auto=format" alt="SwiftFix Logo"></h1>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a href="index.html">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=64&h=64&fit=crop&auto=format" alt="SwiftFix Plumbing logo">
+                <span>SwiftFix Plumbing Services</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Open navigation menu</span>
+            <span class="hamburger"></span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a class="nav-link active" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link" href="enquiry.html">Enquiry</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-
-<!-- ===== MAIN CONTENT ===== -->
-<main>
-
-    <!-- Hero Section -->
-    <section>
-        <h2>Fast, Reliable Plumbing You Can Trust</h2>
-        <p>Serving Pretoria with professional plumbing solutions for homes and businesses. We respond quickly, fix problems efficiently, and ensure long-lasting results.</p>
-        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop&auto=format" alt="Professional plumbing work">
+<main class="page-content">
+    <section class="hero">
+        <div class="hero-content">
+            <p class="badge">Pretoria Plumbing Experts</p>
+            <h1>Fast, Reliable Plumbing Service for Home & Business</h1>
+            <p>SwiftFix Plumbing Services offers responsive plumbing repairs, emergency support, drain cleaning and pipe installation with a focus on quality workmanship and customer satisfaction.</p>
+            <div class="hero-actions">
+                <a class="btn" href="enquiry.html">Request a Service</a>
+                <a class="btn-secondary" href="services.html">View Services</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=900&h=700&fit=crop&auto=format"
+                srcset="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=480&h=373&fit=crop&auto=format 480w, https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=900&h=700&fit=crop&auto=format 900w, https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=933&fit=crop&auto=format 1200w"
+                sizes="(max-width: 768px) 100vw, 45vw"
+                alt="Qualified plumbing technician fixing a pipe">
+        </div>
     </section>
-
-    <!-- Services Overview -->
-    <section>
-        <h2>Our Core Services</h2>
-        <article>
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=200&h=150&fit=crop&auto=format" alt="Leak repair">
-            <h3>Leak Repairs</h3>
-            <p>We detect and fix leaks quickly to prevent water damage and reduce costs.</p>
-        </article>
-
-        <article>
-            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=200&h=150&fit=crop&auto=format" alt="Drain cleaning">
-            <h3>Drain Cleaning</h3>
-            <p>Blocked drains cleared using safe and effective techniques.</p>
-        </article>
-
-        <article>
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=200&h=150&fit=crop&auto=format" alt="Pipe installation">
-            <h3>Pipe Installation</h3>
-            <p>Professional installation for new builds and renovations.</p>
-        </article>
-
-        <article>
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop&auto=format" alt="Emergency plumbing">
-            <h3>Emergency Plumbing</h3>
-            <p>24/7 emergency services for urgent plumbing issues.</p>
-        </article>
+    <section class="service-cards">
+        <div class="section-title">Core Plumbing Services</div>
+        <div class="grid-2 grid-4">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=267&fit=crop&auto=format 400w, https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop&auto=format 600w, https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&h=600&fit=crop&auto=format 900w"
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    alt="Leak repair specialist inspecting a water pipe">
+                <h3>Leak Repairs</h3>
+                <p>Swift diagnostic repairs for hidden leaks, burst pipes and dripping taps to protect your property.</p>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=267&fit=crop&auto=format 400w, https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&auto=format 600w, https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=900&h=600&fit=crop&auto=format 900w"
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    alt="Drain cleaning technician using specialised tools">
+                <h3>Drain Cleaning</h3>
+                <p>Safe, effective drain clearing for kitchens, bathrooms and sewer lines using industry-standard tools.</p>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=267&fit=crop&auto=format 400w, https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&auto=format 600w, https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&h=600&fit=crop&auto=format 900w"
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    alt="New pipe installation in residential building">
+                <h3>Pipe Installation</h3>
+                <p>High-quality pipe installation and replacements for renovations, new builds and commercial upgrades.</p>
+            </article>
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=267&fit=crop&auto=format 400w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format 600w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=600&fit=crop&auto=format 900w"
+                    sizes="(max-width: 768px) 100vw, 48vw"
+                    alt="Emergency plumbing van arriving at site">
+                <h3>Emergency Plumbing</h3>
+                <p>24/7 emergency support for burst pipes, flooding and urgent plumbing failures in Pretoria.</p>
+            </article>
+        </div>
     </section>
-
-    <!-- Call to Action -->
-    <section>
-        <h2>Need Help Fast?</h2>
-        <p>Contact us today or submit an enquiry to get a quick response from our team.</p>
-        <a href="enquiry.html">Request a Service</a>
+    <section class="highlight-card">
+        <div class="section-title">Why Pretoria Customers Choose SwiftFix</div>
+        <div class="quote-block">
+            <p>"SwiftFix arrived quickly, fixed the leak cleanly and explained the whole repair process. Excellent service for homeowners and small businesses."</p>
+        </div>
+        <ul class="feature-list">
+            <li>Responsive local plumbers serving Pretoria central and surrounds</li>
+            <li>Transparent pricing and clear communication</li>
+            <li>Trusted work for domestic, rental and commercial properties</li>
+        </ul>
     </section>
-
 </main>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-    <p> copy; 2026 SwiftFix Plumbing Services | Pretoria, South Africa</p>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h3>About SwiftFix</h3>
+            <p>Local Pretoria plumbers delivering prompt repairs, maintenance and installations for homes and businesses.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@swiftfix.co.za">info@swiftfix.co.za</a></p>
+            <p>Phone: <a href="tel:+27123456789">012 345 6789</a></p>
+            <p>Pretoria, South Africa</p>
+        </div>
+    </div>
+    <p class="footer-note">&copy; 2026 SwiftFix Plumbing Services. All rights reserved.</p>
 </footer>
-
-<!-- JS will be added in Part 3 -->
 <script src="js/script.js"></script>
 </body>
 </html>

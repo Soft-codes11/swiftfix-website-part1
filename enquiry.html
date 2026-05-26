@@ -3,69 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Enquiry - SwiftFix Plumbing</title>
+    <title>Enquiry Form - SwiftFix Plumbing Services</title>
+    <meta name="description" content="Submit a service enquiry to SwiftFix Plumbing Services in Pretoria. Complete the form for quick response and reliable plumbing support.">
+    <meta name="keywords" content="plumbing enquiry form, Pretoria plumbing enquiry, service request, plumbing quote, SwiftFix enquiry">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-<header>
-    <h1>Request a Plumbing Service <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=50&h=50&fit=crop&auto=format" alt="SwiftFix Logo"></h1>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a href="index.html">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=64&h=64&fit=crop&auto=format" alt="SwiftFix Plumbing logo">
+                <span>SwiftFix Plumbing Services</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Open navigation menu</span>
+            <span class="hamburger"></span>
+        </button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li><a class="nav-link active" href="enquiry.html">Enquiry</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-
-<main>
-
-    <!-- Enquiry Form -->
-    <section>
-        <h2>Submit Your Request</h2>
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&auto=format" alt="Contact form for plumbing enquiry">
-
-        <form>
-
-            <!-- Name Input -->
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <!-- Email Input -->
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <!-- Service Selection -->
-            <label for="service">Select Service:</label><br>
-            <select id="service" name="service">
-                <option>Leak Repair</option>
-                <option>Drain Cleaning</option>
-                <option>Pipe Installation</option>
-                <option>Emergency Service</option>
-            </select><br><br>
-
-            <!-- Message -->
-            <label for="message">Additional Details:</label><br>
-            <textarea id="message" name="message" rows="4"></textarea><br><br>
-
-            <!-- Submit Button -->
-            <button type="submit">Submit Enquiry</button>
-
-        </form>
+<main class="page-content">
+    <section class="form-section">
+        <div class="section-title">Request a Plumbing Service</div>
+        <div class="form-layout">
+            <form id="enquiryForm" novalidate>
+                <p>Complete the form below and our Pretoria plumbing team will be in touch within 24 hours.</p>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required aria-required="true">
+                    <span class="input-error" id="nameError">Please enter your full name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" id="emailAddress" name="emailAddress" required aria-required="true">
+                    <span class="input-error" id="emailError">Enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. 081 234 5678" required aria-required="true">
+                    <span class="input-error" id="phoneError">Enter a valid South African phone number.</span>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Service Type</label>
+                    <select id="serviceType" name="serviceType" required aria-required="true">
+                        <option value="">Choose a service</option>
+                        <option value="Leak Repair">Leak Repair</option>
+                        <option value="Drain Cleaning">Drain Cleaning</option>
+                        <option value="Pipe Installation">Pipe Installation</option>
+                        <option value="Emergency Plumbing">Emergency Plumbing</option>
+                        <option value="Hot Water Service">Hot Water Service</option>
+                    </select>
+                    <span class="input-error" id="serviceError">Please select a service type.</span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="urgent" name="urgent">
+                    <label for="urgent">Urgent service required</label>
+                </div>
+                <div class="form-group">
+                    <label for="serviceMessage">Describe the problem</label>
+                    <textarea id="serviceMessage" name="serviceMessage" rows="5" required aria-required="true"></textarea>
+                    <span class="input-error" id="messageError">Please tell us what needs attention.</span>
+                </div>
+                <button class="btn" type="submit">Submit Enquiry</button>
+                <div class="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+            <div>
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=700&fit=crop&auto=format"
+                    srcset="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=480&h=373&fit=crop&auto=format 480w, https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=700&fit=crop&auto=format 900w, https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=933&fit=crop&auto=format 1200w"
+                    sizes="(max-width: 768px) 100vw, 45vw"
+                    alt="Customer submitting plumbing enquiry form">
+            </div>
+        </div>
     </section>
-
 </main>
-
-<footer>
-    <p> copy; 2026 SwiftFix Plumbing Services</p>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h3>About SwiftFix</h3>
+            <p>Local Pretoria plumbers delivering prompt repairs, maintenance and installations for homes and businesses.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@swiftfix.co.za">info@swiftfix.co.za</a></p>
+            <p>Phone: <a href="tel:+27123456789">012 345 6789</a></p>
+            <p>Pretoria, South Africa</p>
+        </div>
+    </div>
+    <p class="footer-note">&copy; 2026 SwiftFix Plumbing Services. All rights reserved.</p>
 </footer>
-
 <script src="js/script.js"></script>
 </body>
 </html>
