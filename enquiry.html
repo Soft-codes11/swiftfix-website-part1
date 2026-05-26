@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Enquiry - SwiftFix Plumbing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Request a Plumbing Service <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=50&h=50&fit=crop&auto=format" alt="SwiftFix Logo"></h1>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <!-- Enquiry Form -->
+    <section>
+        <h2>Submit Your Request</h2>
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&auto=format" alt="Contact form for plumbing enquiry">
+
+        <form>
+
+            <!-- Name Input -->
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Service Selection -->
+            <label for="service">Select Service:</label><br>
+            <select id="service" name="service">
+                <option>Leak Repair</option>
+                <option>Drain Cleaning</option>
+                <option>Pipe Installation</option>
+                <option>Emergency Service</option>
+            </select><br><br>
+
+            <!-- Message -->
+            <label for="message">Additional Details:</label><br>
+            <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Enquiry</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p> copy; 2026 SwiftFix Plumbing Services</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
