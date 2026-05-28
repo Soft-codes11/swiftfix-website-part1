@@ -83,9 +83,14 @@ The contact page includes a standard contact form for general messages. It is pr
 - Updated page content and documentation to match the current website state.
 
 ## Screenshots
-- `images/screenshots/desktop home sreen.jpeg` — Desktop homepage view with hero section and service cards
-- `images/screenshots/tablet hero section.png` — Tablet hero section showing the responsive layout
-- `images/screenshots/mobile hero section.png` — Mobile hero section showing the stacked responsive layout
+
+| Device | Preview | Description |
+|--------|---------|-------------|
+| Desktop | ![Desktop](images/screenshots/desktop%20home%20sreen.jpeg) | Homepage with hero section and service cards |
+| Tablet | ![Tablet](images/screenshots/tablet%20hero%20section.png) | Hero section showing responsive layout |
+| Mobile | ![Mobile](images/screenshots/mobile%20hero%20section.png) | Stacked responsive layout on mobile |
+
+*Click to view full size images*
 
 
 ## Accessibility
