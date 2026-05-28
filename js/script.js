@@ -1,4 +1,11 @@
+ // Runs once the HTML page has been fully loaded and parsed.
+// This is important because we query elements from the DOM (the page) below.
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- NAVIGATION (mobile hamburger menu) ---
+
+    // If you add ?debug to the URL, we can show internal logs to help debugging.
+    // Example: index.html?debug
     const debugMode = window.location.search.includes('debug');
     const debugPanel = debugMode ? document.createElement('div') : null;
     const refreshDebugPanel = () => {
@@ -18,11 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.append(debugPanel);
     }
 
+    // Navigation elements:
+    // - navToggle = the hamburger button on mobile
+    // - primaryNav = the menu that we show/hide
     const navToggle = document.querySelector('.nav-toggle');
     const primaryNav = document.querySelector('.primary-navigation');
+
     if (navToggle && primaryNav) {
+        // Only run navigation code if these elements exist on the page.
+        // (Some pages might not have the hamburger/menu elements.)
+
         logDebug('nav init: found navToggle and primaryNav');
+
+        // When the hamburger button is clicked, open/close the navigation menu.
         navToggle.addEventListener('click', event => {
+
             event.stopPropagation();
             const expanded = navToggle.getAttribute('aria-expanded') === 'true';
             const newState = !expanded;
@@ -51,25 +68,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // --- SERVICES SEARCH (services.html) ---
+    // This finds services by matching the user's keywords to card text.
     const serviceSearch = document.getElementById('serviceSearch');
+
     if (serviceSearch) {
         const cards = Array.from(document.querySelectorAll('.service-card'));
         const emptyState = document.getElementById('searchEmpty');
+
+        // Filter the service cards based on what the user types.
+        // (This makes the services page feel faster and more user-friendly.)
+
+        // We use both the card title and its short description for matching.
         const filterServices = () => {
             const query = serviceSearch.value.trim().toLowerCase();
             let visibleCount = 0;
+
             cards.forEach(card => {
-                const service = card.dataset.service.toLowerCase();
-                const description = card.dataset.description.toLowerCase();
+                const service = (card.dataset.service || '').toLowerCase();
+                const description = (card.dataset.description || '').toLowerCase();
+
+                // Match if the query appears in either the service title or description.
                 const match = service.includes(query) || description.includes(query);
-            card.style.display = match ? 'grid' : 'none';
-            if (match) visibleCount += 1;
-        });
-        emptyState.classList.toggle('visible', visibleCount === 0);
-    };
+
+                // Hide/show the card.
+                card.style.display = match ? 'grid' : 'none';
+
+                if (match) visibleCount += 1;
+            });
+
+            // If nothing matches, show the empty-state message.
+            emptyState.classList.toggle('visible', visibleCount === 0);
+        };
+
         serviceSearch.addEventListener('input', filterServices);
     }
+
+    // --- ENQUIRY FORM VALIDATION (enquiry.html) ---
+    // This validates user input (name, email, phone, service type, message)
+    // and shows helpful error messages before submitting.
     const enquiryForm = document.getElementById('enquiryForm');
+
     if (enquiryForm) {
         const fullName = document.getElementById('fullName');
         const emailAddress = document.getElementById('emailAddress');
@@ -136,7 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
             enquiryForm.reset();
         });
     }
+    // --- GALLERY LIGHTBOX (gallery.html) ---
+    // Clicking an image card opens a dark-screen popup (lightbox).
+    // The lightbox supports buttons and keyboard navigation.
     const galleryCards = Array.from(document.querySelectorAll('.gallery-card'));
+
     const lightbox = document.querySelector('.lightbox');
     if (galleryCards.length && lightbox) {
         const lightboxImage = lightbox.querySelector('.lightbox-image');
@@ -167,15 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         };
         const showSlide = index => openLightbox(index);
+        // Add click + keyboard support on each gallery image card.
         galleryCards.forEach((card, index) => {
             card.addEventListener('click', () => openLightbox(index));
             card.addEventListener('keydown', event => {
+                // Allow Enter/Space to open the lightbox (keyboard accessibility).
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
                     openLightbox(index);
                 }
             });
         });
+
         closeButton.addEventListener('click', closeLightbox);
         prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
         nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
@@ -192,3 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+

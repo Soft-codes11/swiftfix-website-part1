@@ -6,18 +6,28 @@
 - Module: WEDE5020 - Web Development (Introduction)
 
 ## Project Overview
-SwiftFix Plumbing Services is a modern, responsive website built for a Pretoria-based plumbing company. The site demonstrates accessible semantic HTML, mobile-first responsive design, SEO optimisation, interactive JavaScript features and forms with validation.
+SwiftFix Plumbing Services is a multi-page, responsive website for a Pretoria-based plumbing company. It presents the company’s services, gallery, contact details, and enquiry form using semantic HTML, mobile-first CSS, and vanilla JavaScript enhancements.
 
-## Features
-- Responsive sticky navigation with mobile hamburger menu
-- SEO-friendly page titles, meta descriptions and keywords
-- Unique heading structure and semantic HTML5 layout
-- Responsive service cards and image gallery
-- Interactive lightbox gallery with keyboard navigation
+## Current Website Status
+The site currently includes:
+- Home page with hero section, featured services, and trust highlights
+- About page with company mission, vision, and values
+- Services page with live search filtering
+- Gallery page with an interactive lightbox
+- Enquiry page with client-side form validation and feedback
+- Contact page with service areas, embedded Google Map, and contact form
+- Shared sticky header, responsive navigation, and consistent footer across all pages
+
+## Implemented Features
+- Responsive sticky navigation with a mobile hamburger menu
+- Consistent multi-page layout with semantic HTML5 structure
+- Service cards and responsive content grids
+- Interactive gallery lightbox with keyboard navigation
 - Live search filter on the services page
-- Accessible enquiry form with real-time validation
-- Responsive embedded Google Map for Pretoria location
-- Smooth hover transitions and professional card-based layout
+- Enquiry form validation with real-time error feedback
+- Responsive Google Maps embed on the contact page
+- SEO-friendly page titles, descriptions, keywords, and image alt text
+- Accessible buttons, labels, and keyboard-friendly controls
 
 ## Technologies Used
 - HTML5
@@ -25,66 +35,69 @@ SwiftFix Plumbing Services is a modern, responsive website built for a Pretoria-
 - Vanilla JavaScript
 
 ## Responsive Design
-Mobile-first CSS ensures smooth scaling on mobile, tablet and desktop. Media queries create flexible grids, stacked cards, and a responsive hero section for all screen sizes.
+The website uses a mobile-first layout with flexible grids, stacked content on smaller screens, and wider multi-column layouts on tablet and desktop. The navigation switches between a hamburger menu on small screens and a horizontal menu on larger screens.
 
 ## SEO Improvements
 Each page includes:
 - Unique `title` tags
 - `meta` descriptions
 - `meta` keywords
-- Accessible alt text for images
-- Semantic `header`, `main`, `section`, and `footer` structure
+- Descriptive image `alt` text
+- Semantic `header`, `main`, `section`, and `footer` elements
 
-## Form Validation
-The enquiry form includes:
-- Required fields for name, email, phone, service type and message
-- Email validation with regex
-- South African phone number validation
-- Real-time feedback for invalid fields
-- Success feedback after submission
+## Form Behaviour
+### Enquiry form
+The enquiry form on `enquiry.html` validates:
+- Full name
+- Email address
+- South African phone number
+- Selected service type
+- Problem description
 
-## Installation
-1. Download or clone the project folder.
-2. Open the folder in a code editor.
-3. Open `index.html` in a browser.
+It shows inline error messages, live validation feedback, and a success message after a valid submission.
+
+### Contact form
+The contact page includes a standard contact form for general messages. It is present in the layout, but it does not currently have custom JavaScript validation or submission handling.
 
 ## Folder Structure
 - `index.html` — Homepage
 - `about.html` — About page
 - `services.html` — Services page with live search
-- `gallery.html` — Responsive image gallery with lightbox
-- `enquiry.html` — Interactive enquiry form
-- `contact.html` — Contact page with responsive map
+- `gallery.html` — Gallery page with lightbox
+- `enquiry.html` — Enquiry form page
+- `contact.html` — Contact page with embedded map and contact form
 - `css/style.css` — Site styling
-- `js/script.js` — Navigation, gallery, search and validation scripts
-- `README.md` — Project documentation
+- `js/script.js` — Navigation, search, validation, and lightbox scripts
 - `CHANGELOG.md` — Development history
+- `README.md` — Project documentation
 
-## Changelog
-- Added external CSS styling, mobile-first typography, and responsive breakpoints for Part 2.
-- Implemented consistent footer column layout and enhanced header navigation for desktop and mobile.
-- Added responsive image optimization using `srcset` and `sizes`.
-- Polished interactive states, hover effects, and accessible keyboard navigation.
-- Documented feedback-based improvements from Part 1.
+## Installation
+1. Clone or download the project folder.
+2. Open the folder in a code editor.
+3. Open `index.html` in a browser.
+
+## Changelog Summary
+- Built the initial site structure and core pages.
+- Added responsive styling, navigation, and layout improvements.
+- Implemented JavaScript for menu toggling, services search, enquiry validation, and gallery lightbox.
+- Updated page content and documentation to match the current website state.
 
 ## Screenshots
-- `screenshot-homepage.png` — Homepage desktop view with hero and service cards
-- `screenshot-services.png` — Services page with live search and responsive cards
-- `screenshot-enquiry.png` — Enquiry form validation and success feedback
-- `screenshot-gallery.png` — Gallery page with lightbox overlay
+- `images/screenshots/desktop home sreen.jpeg` — Desktop homepage view with hero section and service cards
+- `images/screenshots/tablet hero section.png` — Tablet hero section showing the responsive layout
+- `images/screenshots/mobile hero section.png` — Mobile hero section showing the stacked responsive layout
+
 
 ## Accessibility
-- Accessible navigation and buttons
-- Form labels associated with inputs
-- Alt text on all images
-- Keyboard support for gallery modal
-- ARIA attributes for interactive controls
+- Clear navigation structure
+- Form labels linked to inputs
+- Accessible gallery controls
+- Keyboard support for lightbox navigation
+- Semantic page landmarks
 
 ## References
-- Mozilla Developer Network: CSS reset and responsive design
-- Mozilla Developer Network: responsive images with `srcset` and `sizes`
+- Mozilla Developer Network: HTML, CSS, and JavaScript documentation
 - W3C ARIA Authoring Practices
-- Google SEO best practices for meta descriptions and page titles
-- Vanilla JavaScript for DOM interactivity
-- Responsive design best practices for mobile-first layouts
-- SEO guidelines for title tags and meta descriptions
+- Google SEO best practices for titles and meta descriptions
+- Responsive design best practices
+- Vanilla JavaScript DOM interaction patterns
