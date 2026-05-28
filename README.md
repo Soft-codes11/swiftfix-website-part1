@@ -88,7 +88,7 @@ The contact page includes a standard contact form for general messages. It is pr
 |--------|---------|-------------|
 | Desktop | ![Desktop](images/screenshots/desktop%20home%20sreen.jpeg) | Homepage with hero section and service cards |
 | Tablet | ![Tablet](images/screenshots/tablet%20hero%20section.png) | Hero section showing responsive layout |
-| Mobile | ![Mobile](images/screenshots/mobile%20hero%20section.png) | Stacked responsive layout on mobile |
+| Mobile | ![Mobile](images/screenshots/mobile%20screen.png) | Stacked responsive layout on mobile |
 
 *Click to view full size images*
 
