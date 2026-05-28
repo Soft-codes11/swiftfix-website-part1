@@ -100,9 +100,19 @@ The contact page includes a standard contact form for general messages. It is pr
 - Keyboard support for lightbox navigation
 - Semantic page landmarks
 
+
 ## References
-- Mozilla Developer Network: HTML, CSS, and JavaScript documentation
-- W3C ARIA Authoring Practices
-- Google SEO best practices for titles and meta descriptions
-- Responsive design best practices
-- Vanilla JavaScript DOM interaction patterns
+
+Google (2025) *Search Engine Optimization (SEO) Starter Guide*, Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 28 May 2026).
+
+Marcotte, E. (2011) *Responsive Web Design*, A List Apart, Available at: https://alistapart.com/article/responsive-web-design/ (Accessed: 28 May 2026).
+
+Mozilla Developer Network (2025) *HTML: HyperText Markup Language*, Available at: https://developer.mozilla.org/en-US/docs/Web/HTML (Accessed: 28 May 2026).
+
+Mozilla Developer Network (2025) *CSS: Cascading Style Sheets*, Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 28 May 2026).
+
+Mozilla Developer Network (2025) *JavaScript*, Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript (Accessed: 28 May 2026).
+
+W3C (2023) *ARIA Authoring Practices Guide (APG)*, Available at: https://www.w3.org/WAI/ARIA/apg/ (Accessed: 28 May 2026).
+
+W3Schools (2025) *JavaScript HTML DOM*, Available at: https://www.w3schools.com/js/js_htmldom.asp (Accessed: 28 May 2026).
