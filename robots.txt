@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soft-codes11.github.io/swiftfix-website-part1/sitemap.xml

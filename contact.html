@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact SwiftFix Plumbing Services</title>
+    <link rel="canonical" href="https://soft-codes11.github.io/swiftfix-website-part1/contact.html">
     <meta name="description" content="Contact SwiftFix Plumbing Services in Pretoria for fast quotes, emergency plumbing support and reliable service area coverage.">
     <meta name="keywords" content="contact plumbing Pretoria, plumbing quote, emergency plumber contact, service areas Pretoria, SwiftFix contact">
+
+    <meta property="og:title" content="SwiftFix Plumbing Services - Contact">
+    <meta property="og:description" content="Contact SwiftFix Plumbing in Pretoria. Send a message and we’ll prepare your email automatically.">
+    <meta property="og:url" content="https://soft-codes11.github.io/swiftfix-website-part1/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://soft-codes11.github.io/swiftfix-website-part1/images/Emergency%20Plumbing.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SwiftFix Plumbing Services - Contact">
+    <meta name="twitter:description" content="Contact SwiftFix Plumbing in Pretoria. Send a message and we’ll prepare your email automatically.">
+
+    <link rel="icon" href="favicon.ico">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "SwiftFix Plumbing Services",
+      "url": "https://soft-codes11.github.io/swiftfix-website-part1/",
+      "telephone": "+27123456789",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pretoria",
+        "addressCountry": "ZA"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -58,31 +87,45 @@
     <!-- Contact form -->
     <section class="form-section">
         <div class="section-title">Send a Message</div>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+            <p>Send us a message and we’ll respond as soon as possible. Your email will be prepared automatically and you can send it from your email client.</p>
+
             <div class="form-group">
                 <label for="contactName">Full Name</label>
-                <input type="text" id="contactName" name="contactName" required placeholder="Enter your full name">
+                <input type="text" id="contactName" name="contactName" required placeholder="Enter your full name" aria-required="true">
+                <span class="input-error" id="contactNameError">Please enter your full name.</span>
             </div>
+
             <div class="form-group">
                 <label for="contactEmail">Email Address</label>
-                <input type="email" id="contactEmail" name="contactEmail" required placeholder="Enter your email address">
+                <input type="email" id="contactEmail" name="contactEmail" required placeholder="Enter your email address" aria-required="true">
+                <span class="input-error" id="contactEmailError">Enter a valid email address.</span>
             </div>
+
             <div class="form-group">
                 <label for="contactPhone">Phone Number</label>
-                <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g. 081 234 5678" required>
+                <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g. 081 234 5678" required aria-required="true">
+                <span class="input-error" id="contactPhoneError">Enter a valid South African phone number.</span>
             </div>
+
             <div class="form-group">
                 <label for="contactSubject">Subject</label>
-                <input type="text" id="contactSubject" name="contactSubject" required placeholder="Subject of your message">
+                <input type="text" id="contactSubject" name="contactSubject" required placeholder="Subject of your message" aria-required="true">
+                <span class="input-error" id="contactSubjectError">Please enter a subject.</span>
             </div>
+
             <div class="form-group">
                 <label for="contactMessage">Message</label>
-                <textarea id="contactMessage" name="contactMessage" rows="5" required placeholder="Write your message here"></textarea>
+                <textarea id="contactMessage" name="contactMessage" rows="5" required placeholder="Write your message here" aria-required="true"></textarea>
+                <span class="input-error" id="contactMessageError">Please write your message.</span>
             </div>
+
             <button class="btn" type="submit">Submit Message</button>
+            <div class="form-feedback" role="status" aria-live="polite"></div>
         </form>
     </section>
 </main>
+
 <!-- Site footer -->
 <footer class="site-footer">
     <div class="footer-grid">

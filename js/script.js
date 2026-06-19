@@ -109,6 +109,125 @@ document.addEventListener('DOMContentLoaded', () => {
     // and shows helpful error messages before submitting.
     const enquiryForm = document.getElementById('enquiryForm');
 
+    // --- CONTACT FORM ENHANCEMENTS (contact.html) ---
+    // Adds client-side validation, composes an email body, and prepares a mailto:
+    // link so the user can send the message to the recipient defined in code.
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        const contactName = document.getElementById('contactName');
+        const contactEmail = document.getElementById('contactEmail');
+        const contactPhone = document.getElementById('contactPhone');
+        const contactSubject = document.getElementById('contactSubject');
+        const contactMessage = document.getElementById('contactMessage');
+
+        const nameError = document.getElementById('contactNameError');
+        const emailError = document.getElementById('contactEmailError');
+        const phoneError = document.getElementById('contactPhoneError');
+        const subjectError = document.getElementById('contactSubjectError');
+        const messageError = document.getElementById('contactMessageError');
+
+        const feedback = contactForm.querySelector('.form-feedback');
+        const recipientEmail = 'info@swiftfix.co.za';
+
+        const validateEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        const validatePhone = value => {
+            const cleaned = (value || '').replace(/[\s-]/g, '');
+            // SA: +27 9 digits or 0 + 9 digits
+            return /^(?:\+27|0)\d{9}$/.test(cleaned);
+        };
+
+        const showError = (field, errorEl, msg) => {
+            field.setAttribute('aria-invalid', 'true');
+            errorEl.textContent = msg;
+            errorEl.classList.add('active');
+        };
+
+        const clearError = (field, errorEl) => {
+            field.removeAttribute('aria-invalid');
+            errorEl.classList.remove('active');
+            errorEl.textContent = '';
+        };
+
+        const validate = () => {
+            const nameOk = contactName.value.trim().length >= 2;
+            const emailVal = contactEmail.value.trim();
+            const emailOk = validateEmail(emailVal);
+            const phoneOk = validatePhone(contactPhone.value.trim());
+            const subjectOk = contactSubject.value.trim().length >= 3;
+            const messageOk = contactMessage.value.trim().length >= 10;
+
+            if (!nameOk) showError(contactName, nameError, 'Please enter your full name (min 2 characters).');
+            else clearError(contactName, nameError);
+
+            if (!emailOk) showError(contactEmail, emailError, 'Enter a valid email address.');
+            else clearError(contactEmail, emailError);
+
+            if (!phoneOk) showError(contactPhone, phoneError, 'Enter a valid South African phone number.');
+            else clearError(contactPhone, phoneError);
+
+            if (!subjectOk) showError(contactSubject, subjectError, 'Please enter a subject (min 3 characters).');
+            else clearError(contactSubject, subjectError);
+
+            if (!messageOk) showError(contactMessage, messageError, 'Please write a more detailed message (min 10 characters).');
+            else clearError(contactMessage, messageError);
+
+            return nameOk && emailOk && phoneOk && subjectOk && messageOk;
+        };
+
+        [contactName, contactEmail, contactPhone, contactSubject, contactMessage].forEach(el => {
+            el.addEventListener('input', () => validate());
+        });
+
+        contactForm.addEventListener('submit', event => {
+            event.preventDefault();
+
+            if (!validate()) {
+                feedback.textContent = 'Please correct the highlighted fields before sending.';
+                feedback.className = 'form-feedback error';
+                feedback.style.display = 'block';
+                return;
+            }
+
+            // Simulate an AJAX-style experience (no backend in this project)
+            // by showing a short “preparing email” message.
+            feedback.textContent = 'Preparing your message…';
+            feedback.className = 'form-feedback';
+            feedback.style.display = 'block';
+
+            const name = contactName.value.trim();
+            const email = contactEmail.value.trim();
+            const phone = contactPhone.value.trim();
+            const subject = contactSubject.value.trim();
+            const message = contactMessage.value.trim();
+
+            const body = [
+                'New contact message from SwiftFix website',
+                '',
+                `Name: ${name}`,
+                `Email: ${email}`,
+                `Phone: ${phone}`,
+                `Subject: ${subject}`,
+                '',
+                'Message:',
+                message,
+                '',
+                '— Sent via SwiftFix contact form'
+            ].join('\n');
+
+            const mailto = `mailto:${encodeURIComponent(recipientEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Minimal delay to mimic async behaviour.
+            setTimeout(() => {
+                feedback.textContent = 'Ready to send. Your email client should open now.';
+                feedback.className = 'form-feedback success';
+                feedback.style.display = 'block';
+                window.location.href = mailto;
+            }, 300);
+        });
+    }
+
+
     if (enquiryForm) {
         const fullName = document.getElementById('fullName');
         const emailAddress = document.getElementById('emailAddress');
