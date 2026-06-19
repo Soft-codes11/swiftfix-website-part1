@@ -29,6 +29,10 @@ All notable changes to the SwiftFix Plumbing Services website are documented in 
 * Added Twitter Card metadata for enhanced link previews.
 * Added Local Business structured data using JSON-LD (`@type: Plumber`).
 * Added favicon support for improved browser and bookmark identification.
+* Security hardening: Added a page-level Content Security Policy (CSP) meta tag in each page `<head>` to reduce impact of XSS/injection and restrict resource loading.
+* Optimised page performance: Added CSP carefully to avoid blocking existing inline styles/scripts required for this static site, and kept validation logic lightweight to minimise client-side overhead.
+
+
 
 ### Changed
 

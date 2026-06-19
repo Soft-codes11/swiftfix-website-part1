@@ -128,7 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageError = document.getElementById('contactMessageError');
 
         const feedback = contactForm.querySelector('.form-feedback');
-        const recipientEmail = 'info@swiftfix.co.za';
+        const recipientEmail = 'bonolokoto11@gmail.com';
+
 
         const validateEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
         const validatePhone = value => {
